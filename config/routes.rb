@@ -8,20 +8,23 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
+  # REFACTORING WITH RESOURCES
+  resources :tasks
+
   # LIST ALL TASKS
-  get '/tasks', to: 'tasks#index'
+  # get '/tasks', to: 'tasks#index'
 
   # ADD NEW TASK
-  get 'tasks/new', to: 'tasks#new'
-  post 'tasks', to: 'tasks#create'
+  # get 'tasks/new', to: 'tasks#new'
+  # post 'tasks', to: 'tasks#create'
 
   # REMOVE A TASK
-  delete 'tasks/:id', to: 'tasks#destroy', as: 'delete'
+  # delete 'tasks/:id', to: 'tasks#destroy', as: 'delete'
 
   # EDIT A TASK
-  get 'tasks/:id/edit', to: 'tasks#edit', as: 'edit'
-  patch 'tasks/:id', to: 'tasks#update'
+  # get 'tasks/:id/edit', to: 'tasks#edit', as: 'edit'
+  # patch 'tasks/:id', to: 'tasks#update'
 
   # SEE DETAILS OF SPECIFIC TASK
-  get 'tasks/:id', to: 'tasks#show', as: 'task'
+  # get 'tasks/:id', to: 'tasks#show', as: 'task'
 end

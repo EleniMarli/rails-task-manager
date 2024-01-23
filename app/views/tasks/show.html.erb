@@ -1,5 +1,5 @@
 <h1><%=@task.title%></h1>
 <p><%=@task.details%></p>
-<p><%=@status%></p>
+<p><%= check_box_tag 'task[completed]', 1, @task.completed %> <%=@status%></p>
 <%= link_to '✏️ Edit this task', edit_task_path(@task)%>
 <%= link_to '🔙 Back to list', tasks_path %>
